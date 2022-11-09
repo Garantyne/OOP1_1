@@ -33,15 +33,21 @@ public class Human {
     }
 
     public void setYearOfBrith(int yearOfBrith) {
-        this.yearOfBrith = yearOfBrith;
+        if(yearOfBrith < 0 ){
+            this.yearOfBrith = 0;
+        }else {this.yearOfBrith = yearOfBrith;}
     }
 
     public void setName(String name) {
-        this.name = name;
+        if(name == "" || name.isEmpty() || name.isBlank()){
+            this.name = "!Информация не указана!";
+        }else{this.name = name;}
     }
 
     public void setTown(String town) {
-        this.town = town;
+        if(town == "" || town.isEmpty() || town.isBlank()){
+            this.town = "!Информация не указана!";
+        }else{this.town = town;}
     }
 
     @Override
